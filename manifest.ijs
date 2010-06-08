@@ -8,7 +8,7 @@ Utilities for *.bmp files
 
 VERSION=: '1.0.0'
 
-RELEASE=: 'j701'
+RELEASE=: 'j602 j701'
 
 FILES=: 0 : 0
 bmp.ijs
