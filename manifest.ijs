@@ -14,4 +14,5 @@ FILES=: 0 : 0
 bmp.ijs
 jbox.bmp
 toucan.bmp
+history.txt
 )
