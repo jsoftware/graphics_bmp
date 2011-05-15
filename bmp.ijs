@@ -1,4 +1,7 @@
 coclass 'jbmp'
+
+flipreadrgb=: endian^:IFJ6
+flipwritergb=: endian^:IFJ6
 readbmp=: 3 : 0
 
 r=. readbmphdrall y
@@ -10,12 +13,12 @@ pal=. off {. dat
 dat=. off }. dat
 
 if. bits e. 1 4 8 do.
-  pal=. 256 #. |."1 a. i. _4 }: \ (shdr+14) }. pal
+  pal=. 256 #. flipreadrgb"1 a. i. _4 }: \ (shdr+14) }. pal
   dat=. , ((#~ ^.&256) 2^bits) #: a. i. dat
   pal {~ |. (rws,cls){.(rws,cls+(32%bits)|-cls) $ dat
 elseif. bits=24 do.
   cl4=. 4 * >. (3*cls) % 4
-  |. (rws,cls) {. 256 #. |."1 a.i. _3 [\"1 (rws,cl4) $ dat
+  |. (rws,cls) {. 256 #. flipreadrgb"1 a.i. _3 [\"1 (rws,cl4) $ dat
 elseif. 1 do.
   'only 1,4,8 and 24-bit bitmaps supported, this is ',(":bits),'-bit'
 end.
@@ -69,7 +72,7 @@ if. bit e. 4 8 do.
   if. -. if3 do.
     pal=. 256 256 256 #: pal
   end.
-  pal=. |."1 pal
+  pal=. flipwritergb"1 pal
   pal=. , a. {~ pal ,. 0
   xsbmp=. ($dat) + 0 1 * 4|-$dat
   bmp=. xsbmp{.dat
@@ -79,7 +82,7 @@ else.
   if. -.if3 do.
     dat=. 256 256 256 #: dat
   end.
-  dat=. |."1 dat
+  dat=. flipwritergb"1 dat
   bmp=. ,"2 dat
   bmp=. ((1 4)* >. ($bmp) % (1 4)) {. bmp
 end.
