@@ -1,7 +1,4 @@
 coclass 'jbmp'
-
-flipreadrgb=: endian^:IFJ6
-flipwritergb=: endian^:IFJ6
 readbmp=: 3 : 0
 
 r=. readbmphdrall y
