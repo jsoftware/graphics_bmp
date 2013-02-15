@@ -1,4 +1,7 @@
 coclass 'jbmp'
+
+flipreadrgb=: ]
+flipwritergb=: ]
 readbmp=: 3 : 0
 
 r=. readbmphdrall y
