@@ -16,4 +16,3 @@ jbox.bmp
 toucan.bmp
 history.txt
 )
-PLATFORMS=: 'linux win darwin android'
