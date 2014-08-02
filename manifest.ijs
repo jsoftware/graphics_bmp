@@ -6,9 +6,9 @@ DESCRIPTION=: 0 : 0
 Utilities for *.bmp files
 )
 
-VERSION=: '1.0.8'
+VERSION=: '1.0.9'
 
-RELEASE=: 'j802'
+RELEASE=: 'j802 j803'
 
 FILES=: 0 : 0
 bmp.ijs
