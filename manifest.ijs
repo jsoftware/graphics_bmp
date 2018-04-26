@@ -8,7 +8,9 @@ Utilities for *.bmp files
 
 VERSION=: '1.0.14'
 
-RELEASE=: 'j802 j803 j804 j805 j806 j807'
+RELEASE=: ''
+
+FOLDER=: 'graphics/bmp'
 
 FILES=: 0 : 0
 bmp.ijs
