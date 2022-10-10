@@ -6,7 +6,7 @@ DESCRIPTION=: 0 : 0
 Utilities for *.bmp files
 )
 
-VERSION=: '1.0.15'
+VERSION=: '1.0.16'
 
 RELEASE=: ''
 

@@ -110,7 +110,7 @@ NB. to optional minimum bit size.
 writebmp=: 4 : 0
 
 dat=. x
-'file min'=. 2 {. (boxopen y), <0
+'file min'=. 2 {. (boxopen y), < 24*(IFIOS+.UNAME-:'Darwin')
 
 if3=. (3=#$dat) *. 3={:$dat
 
