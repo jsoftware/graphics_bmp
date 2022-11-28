@@ -116,7 +116,7 @@ bmp=. ,|. bmp{ a.
 sdat=. $bmp
 
 j=. (|.sbmp),(256 #. 0, bit, 0 1),0,sdat,2835 2835,2#spal
-b=. (54+(4*spal)+sdat),0,(54+4*spal),(40+4*spal),j
+b=. (54+(4*spal)+sdat),0,(54+4*spal),40,j
 head=. 'BM',,a.{~,|."1 (4#256)#:b
 
 (head,pal,bmp) 1!:2 boxopen file
